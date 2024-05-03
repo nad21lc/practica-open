@@ -17,6 +17,7 @@ import { OfferApiService } from "../../services/offer-api.service";
 //libreria lodash para clonar objetos
 import * as _ from 'lodash';
 import cloneDeep from 'lodash/cloneDeep';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-offer-table',
@@ -44,13 +45,13 @@ export class OfferTableComponent implements OnInit{
 
   data: any = [];
   dataSource = new MatTableDataSource(this.data);
-  displayedColumns: string[] = ['title', 'description', 'points', 'businessId', 'actions'];
+  displayedColumns: string[] = ['id','title', 'description', 'points', 'businessId', 'actions'];
 
 
   isEditMode = false;
 
 
-  constructor(private offerApiService: OfferApiService) {
+  constructor(private offerApiService: OfferApiService, private  router: Router) {
     this.offerData = {} as Offer;
   }
   ngOnInit(): void {
@@ -71,5 +72,9 @@ export class OfferTableComponent implements OnInit{
     this.offerApiService.deleteItem(id).subscribe(()=>{
       this.dataSource.data=this.dataSource.data.filter((o:any)=>o.id!==id);
     });
+  }
+
+  createOffer() {
+    this.router.navigate(['admin/offers/new']);
   }
 }

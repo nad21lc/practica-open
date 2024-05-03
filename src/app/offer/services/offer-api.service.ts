@@ -52,7 +52,7 @@ export class OfferApiService {
   createItem(item: any): Observable<Offer> {
     console.log(item);
     return this.http
-      .post<Offer>(this.baseUrl, JSON.stringify(item), this.httpOptions)
+      .post<Offer>(this.baseUrl + this.extraUrl, JSON.stringify(item), this.httpOptions)
       .pipe(retry(2), catchError(this.handleError));
   }
 

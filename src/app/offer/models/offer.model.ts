@@ -4,5 +4,5 @@ export interface Offer {
   title: any,
   description: any,
   points: any,
-  Business: Business
+  businessId: any,
 }
