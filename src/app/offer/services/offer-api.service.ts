@@ -67,7 +67,7 @@ export class OfferApiService {
     console.log(this.baseUrl + this.extraUrl + id)
     console.log(id)
     return this.http
-      .delete<Offer>(this.baseUrl + '/' + id, this.httpOptions)
+      .delete<Offer>(this.baseUrl + this.extraUrl + id, this.httpOptions)
       .pipe(retry(2), catchError(this.handleError));
   }
 }
