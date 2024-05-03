@@ -1,6 +1,25 @@
-mat-toolbar{
-  background-color: #6a0dad;
+.mat-toolbar{
+  background: linear-gradient(#000000, #323131);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.title{
+  order: -1;
+  font-weight: 800;
+  font-style: italic;
+  padding: 20px;
 }
 button{
-  margin: 0 10px;
+  background-color: #323131;
+  display:flex;
+  margin-right: 2rem;
+  grid-auto-flow: column;
+  gap: 1em;
+}
+
+.example-spacer{
+  flex: 1 1 auto;
 }

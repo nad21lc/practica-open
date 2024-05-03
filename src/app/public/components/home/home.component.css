@@ -14,7 +14,7 @@
   justify-content: center;
   width: 70%;
   height: 100%;
-  background-color: #97d7b0;
+  background: linear-gradient(#000000, #323131);
   border-radius: 10px;
 }
 
@@ -30,7 +30,7 @@
 
 .card-title{
   font-size: 2rem;
-  color: #F0DA8B;
+  color: #0eff71;
   font-weight: bold;
   margin: 2% 0;
 }
