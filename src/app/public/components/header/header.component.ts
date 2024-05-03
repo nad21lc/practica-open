@@ -17,8 +17,8 @@ export class HeaderComponent {
 
     constructor(private router: Router) { }
 
-    redirectToMovies() {
-        this.router.navigate(['bussines/peliculas']);
+    redirectToOffers() {
+        this.router.navigate(['business/offers']);
     }
 
     redirectToHome() {
